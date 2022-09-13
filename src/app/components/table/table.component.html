@@ -1,0 +1,6 @@
+<ag-grid-angular #myGrid
+    [ngClass]="{'ag-theme-alpine-dark': themeMode === 'dark', 'ag-theme-alpine' : themeMode === 'light'}"
+    class="ag-theme-alpine-dark" [rowData]="rowData" [columnDefs]="columnDefs" [animateRows]="true" [pagination]="true"
+    [paginationPageSize]="10" [cacheQuickFilter]="true" (gridReady)="onGridReady($event)"
+    [loadingOverlayComponent]="loadingOverlayComponent" >
+</ag-grid-angular>

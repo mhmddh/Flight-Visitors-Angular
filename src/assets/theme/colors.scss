@@ -1,0 +1,69 @@
+$card-container-bg-color : #2f2d2d;
+$mat-card-bg-color : #4b4848;
+$primary-text-color : #ffff;
+$dark-primary-text-color : #000000;
+$light-primary-text-color: #d4c5c5;
+$light-dark-primary-text-color: #2b2a2a;
+$green-bg-color: #008000;
+$secondary-green-color: #5A8643;
+$navbar-header-bg-color : #607D8B;
+$subtitle-text-color: #808080;
+$label-text-color: #d3d3d3;
+$sidenav-bg-color: #424242;
+$secondary-card-container-bg-color :#bcd2e4;
+$mat-card-content-bg-color :#dde2eb;
+$light-white-bg-color: #F6F6F6;
+$light-radio-button-border-color : #A6A6A6; 
+$dark-radio-button-border-color : #373737;
+$tool-panel-dark-bg-color: #181d1f;
+$tool-panel-light-bg-color: #ffff;
+$tool-panel-light-border-color: #CED2D7;
+$dark-columns-filter-border-color: #393c3f;
+$light-columns-filter-border-color: #e9ecf2;
+$checkbox-bg-color: #6ba841;
+// $light-columns-filter-border-color: 
+:root {
+    --card-container-bg-color: #{$card-container-bg-color};
+    --mat-card-bg-color: #{$mat-card-bg-color};
+    --mat-card-content-bg-color :#{$mat-card-bg-color};
+    --primary-text-color: #{$primary-text-color};
+    --light-primary-text-color: #{$light-primary-text-color};
+    --input-bg-color: #{$card-container-bg-color};
+    --green-bg-color: #{$green-bg-color};
+    --navbar-header-bg-color : #{$navbar-header-bg-color};
+    --subtitle-text-color: #{$subtitle-text-color};
+    --label-text-color: #{$label-text-color};
+    --mat-sidenav-bg-color: #{$sidenav-bg-color};
+    --grid-card-bg-color: #{$card-container-bg-color};
+    --sub-title-color-text: #{$light-primary-text-color};
+    --section-header-divider-color: #{$card-container-bg-color};
+    --status-bg-color: #{$green-bg-color};
+    --radio-button-border-color: #{$dark-radio-button-border-color};
+    --toolpanel-bg-color: #{$tool-panel-dark-bg-color};
+    --toolpanel-border-color: #{$tool-panel-dark-bg-color};
+    --columns-filter-border-color: #{$dark-columns-filter-border-color};
+
+}
+
+html[data-theme='light'] {
+    --card-container-bg-color: #{$secondary-card-container-bg-color};
+    --mat-card-bg-color: #{$primary-text-color};
+    --mat-card-content-bg-color :#{$light-white-bg-color};
+    --primary-text-color: #{$dark-primary-text-color};
+    --light-primary-text-color: #{$light-primary-text-color};
+    --input-bg-color: #{$light-white-bg-color};
+    --green-bg-color: #{$green-bg-color};
+    --navbar-header-bg-color : #{$navbar-header-bg-color};
+    --subtitle-text-color: #{$subtitle-text-color};
+    --label-text-color: #{$label-text-color};
+    --mat-sidenav-bg-color: #{$primary-text-color};
+    --grid-card-bg-color: #{$light-white-bg-color};
+    --sub-title-color-text: #{$light-dark-primary-text-color};
+    --section-header-divider-color: #{$mat-card-content-bg-color};
+    --status-bg-color: #{$mat-card-content-bg-color};
+    --radio-button-border-color: #{$light-radio-button-border-color};
+    --toolpanel-bg-color: #{$tool-panel-light-bg-color};
+    --toolpanel-border-color: #{$tool-panel-light-border-color};
+    --columns-filter-border-color: #{$light-columns-filter-border-color};
+
+}

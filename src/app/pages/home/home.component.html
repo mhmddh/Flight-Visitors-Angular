@@ -1,0 +1,39 @@
+<app-navbar (toggleMenuEvent)="sidenav.toggle()"></app-navbar>
+<mat-sidenav-container>
+    <mat-sidenav position="end" #sidenav>
+        <app-sidebar (changeLangEvent)="changeCurrentLang($event)" (changeThemeEvent)="changeTheme($event)">
+        </app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <section class="container-section">
+            <mat-card [ngClass]="{'matcard-min-height': isGrid}">
+                <div class="section-card-header">
+                    <mat-card-title-group>
+                        <mat-card-title>{{ 'VISITORS_LIST' | translate }}</mat-card-title>
+                        <mat-card-subtitle>{{ 'SEARCH' | translate }}</mat-card-subtitle>
+                        <button class="toggle-button" (click)="toggleView()">
+                            <img [src]="isGrid ? 'assets/icons/table-icon.svg' : 'assets/icons/grid-icon.svg'">
+                        </button>
+                    </mat-card-title-group>
+                    <div class="filter-search">
+                        <input #searchStr (keyup)="searchPerson(searchStr.value)"
+                            placeholder="{{ 'FILTER' | translate }}">
+                        <span [ngClass]="{'rtl-span-direction': rtl,'ltr-span-direction': !rtl}">
+                            <mat-icon>filter_list</mat-icon>
+                        </span>
+                    </div>
+                </div>
+                <mat-card-content [ngClass]="{'mat-card-content-bg-color': !isGrid}">
+                    <div *ngIf="!isGrid" class="table-container">
+                        <app-table [columnDefs]="columnDefs" [rowData]="persons" [themeMode]="themeMode"
+                            (GridReadyEvent)="getGridApi($event)"></app-table>
+                        <app-tool-panel [columnDefs]="columnDefs" [columnApi]="columnApi" [rtl]="rtl"></app-tool-panel>
+                    </div>
+                    <div *ngIf="isGrid" class="cards-list">
+                        <app-card *ngFor="let person of persons" [person]="person"></app-card>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>

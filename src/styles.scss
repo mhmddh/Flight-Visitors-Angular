@@ -1,0 +1,690 @@
+/* Add application styles & imports to this file! */
+
+@import 'ag-grid-community/dist/styles/ag-grid.css';
+@import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+@import 'assets/theme/colors.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.flex-column {
+    display: flex;
+    justify-content: column;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: row;
+}
+
+// Spinner Ag Overlay Styles
+.ag-theme-alpine-dark .ag-overlay-loading-wrapper {
+    background-color: transparent;
+}
+
+.spinner-wrapper {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+app-spinner .ag-custom-loading-cell span {
+    margin-left: 5px;
+}
+
+/* Root Card Styles */
+
+.container-section {
+    background-color: var(--card-container-bg-color);
+    padding: 15px 15px 0px 15px;
+    min-height: 772px;
+}
+
+.container-section mat-card {
+    padding: 0;
+}
+
+.container-section mat-card mat-card-content {
+    margin-top: 0px !important;
+    padding-top: 20px;
+}
+
+.container-section mat-card .mat-card-content-bg-color {
+    background-color: var(--mat-card-content-bg-color);
+}
+
+.container-section mat-card {
+    background-color: var(--mat-card-bg-color);
+    color: var(--primary-text-color);
+}
+
+.matcard-min-height {
+    min-height: 763px
+}
+
+.container-section .section-card-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--section-header-divider-color);
+    color: var(--primary-text-color);
+}
+
+.section-card-header mat-card-title-group {
+    padding: 20px 20px 10px 20px;
+}
+
+.section-card-header mat-card-title-group mat-card-title {
+    margin-bottom: 20px;
+}
+
+.section-card-header mat-card-title-group mat-card-subtitle {
+    margin-top: 4px !important;
+    text-align: justify;
+}
+
+.container-section mat-card mat-card-content {
+    margin-top: 20px;
+}
+
+.container-section mat-card mat-card-subtitle {
+    color: var(--primary-text-color);
+}
+
+.toggle-button {
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.filter-search {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+.filter-search input {
+    border: 0;
+    width: 100%;
+    background-color: var(--input-bg-color);
+    padding: 10px;
+    color: var(--primary-text-color);
+    border-radius: 4px;
+    outline: none;
+}
+
+
+.filter-search .ltr-span-direction {
+    position: absolute;
+    right: 30px;
+    padding-top: 9px;
+}
+
+.filter-search .rtl-span-direction {
+    position: absolute;
+    padding-top: 9px;
+    left: 30px;
+}
+
+
+
+
+
+/* Table Styles */
+
+.table-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 20px 20px 20px;
+
+}
+
+.table-container app-table {
+    width: 97%;
+}
+
+.table-container app-table ag-grid-angular {
+    height: 550px;
+    width: 100%;
+}
+
+.table-container app-tool-panel .tool-panel {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--toolpanel-bg-color);
+    border-top: 1px solid var(--toolpanel-border-color);
+}
+
+.table-container app-tool-panel .tool-panel-expanded {
+    flex-direction: row-reverse;
+}
+
+.table-container .tool-panel-content {
+    position: relative;
+    width: 50px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 75px;
+}
+
+
+
+
+// .table-container .rtl-tool-panel-content-expanded {
+//     left: 15px;
+// }
+
+
+.table-container .toggle-menu-button {
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    border: 0;
+    color: var(--primary-text-color);
+    transform: rotate(90deg);
+}
+
+
+
+.table-container app-tool-panel .reversed-button {
+    flex-direction: row-reverse;
+    transform: rotate(270deg);
+}
+
+
+.table-container app-tool-panel .columns-filter {
+    display: block;
+    direction: ltr;
+    border-right: 1px solid var(--columns-filter-border-color);
+}
+
+.table-container app-tool-panel .column-list {
+    margin: 10px;
+}
+
+
+.table-container app-tool-panel .column-checkbox {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.table-container app-tool-panel .mat-checkbox-label {
+    width: 130px;
+    line-height: normal;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+
+.table-container app-tool-panel .filter-input-container {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid var(--columns-filter-border-color);
+}
+
+.table-container app-tool-panel .filter-input {
+    border: 0;
+    background-color: var(--input-bg-color);
+    padding: 8px 25px 8px 10px;
+    color: var(--primary-text-color);
+    border-radius: 4px;
+    outline: none;
+    height: 38px;
+    width: 155px;
+}
+
+
+
+.table-container app-tool-panel .columns-filter .filter-span {
+    position: absolute;
+    right: 18px;
+    padding-top: 8px;
+}
+
+
+
+
+.table-container app-tool-panel .rtl-columns-filter {
+    position: relative;
+    direction: rtl;
+    border-right: 1px solid var(--columns-filter-border-color);
+}
+
+.table-container app-tool-panel .rtl-columns-filter .filter-input {
+    border: 0;
+    background-color: var(--input-bg-color);
+    padding: 8px 10px 8px 25px;
+    color: var(--primary-text-color);
+    border-radius: 4px;
+    outline: none;
+    height: 38px;
+    width: 155px;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $checkbox-bg-color;
+}
+
+
+.table-container app-tool-panel .rtl-columns-filter .rtl-span-direction {
+    position: absolute;
+    padding-top: 8px;
+    left: 18px;
+}
+
+
+
+
+.table-status {
+    color: var(--primary-text-color);
+    background-color: var(--status-bg-color);
+    ;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+app-flight-number img {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid $light-radio-button-border-color;
+}
+
+/* Card Styles */
+
+.cards-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0px 20px 20px 20px;
+    gap: 20px;
+}
+
+.cards-list-container {
+    background-color: $mat-card-bg-color;
+    padding: 20px;
+}
+
+.cards-list app-card {
+    min-width: 24.05%;
+}
+
+.cards-list app-card:last-of-type {
+    margin-bottom: 0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    color: $primary-text-color;
+    background-color: var(--grid-card-bg-color);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    color: var(--primary-text-color);
+}
+
+.card-body img {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+
+.card-content .ref {
+    font-size: 10px;
+    height: 15px;
+}
+
+.card-content .submitted-time {
+    font-size: 9px;
+    color: var(--sub-title-color-text);
+}
+
+.card-content .person-gender {
+    font-size: 12px;
+}
+
+.card-content .person-flight {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.card-content .nationality {
+    font-size: 13px;
+}
+
+.card-content .flight-number {
+    font-size: 13px;
+}
+
+.card-content .flight-number img {
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+}
+
+.card-content .subtitle {
+    font-size: 11px;
+    color: $subtitle-text-color;
+}
+
+.card-content .flight-number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-content .flight-number div {
+    padding-left: 5px;
+}
+
+.card-footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-top: 0;
+    padding-left: 7px;
+    padding-bottom: 5px;
+    border: 0;
+    color: var(--primary-text-color);
+    background-color: transparent !important;
+
+}
+
+.card-footer .subtitle {
+    font-size: 11px;
+    text-align: justify;
+    color: $subtitle-text-color;
+}
+
+.card-footer .footer-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer .flight-type {
+    font-size: 13px;
+}
+
+.card-footer .footer-arrival-date {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 95px;
+}
+
+.person-arrival-date {
+    font-size: 13px;
+}
+
+.card-footer .footer-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-status {
+    background-color: var(--status-bg-color);
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 10px;
+}
+
+
+// Navbar Styles
+.mat-toolbar {
+    background-color: $navbar-header-bg-color;
+    color: #ffff;
+    padding: 8px 5px 0px 5px !important;
+}
+
+.mat-toolbar button {
+    background-color: transparent;
+    border: 0;
+}
+
+.mat-toolbar .menu-icon {
+    padding-top: 8px;
+}
+
+.mat-toolbar mat-icon {
+    color: $primary-text-color;
+}
+
+.mat-toolbar .example-spacer {
+    flex: 1 1 auto;
+}
+
+// Mat SideNav
+mat-sidenav-container mat-sidenav {
+    width: 200px;
+    background-color: var(--mat-sidenav-bg-color) !important;
+}
+
+mat-sidenav-container mat-sidenav .mat-sidenav-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-sidenav-content mat-button-toggle-group {
+    align-self: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.mat-sidenav-content mat-button-toggle {
+    height: 25px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.mat-sidenav-content mat-button-toggle-group .mat-button-toggle-checked {
+    background-color: $secondary-green-color;
+    color: $primary-text-color;
+}
+
+
+.mat-sidenav-content .sidenav-title {
+    color: $secondary-green-color;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.mat-sidenav-content mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+}
+
+.mat-sidenav-content mat-radio-group mat-radio-button {
+    color: var(--primary-text-color);
+}
+
+.mat-sidenav-content mat-radio-group .mat-ripple-element {
+    background-color: $secondary-green-color  !important;
+}
+
+.mat-sidenav-content mat-radio-group mat-radio-button .mat-radio-outer-circle {
+    border-color: var(--radio-button-border-color) !important;
+}
+
+.mat-sidenav-content mat-radio-group mat-radio-button .mat-radio-inner-circle {
+    background-color: $secondary-green-color  !important;
+}
+
+.mat-sidenav-content mat-radio-group .mat-radio-checked .mat-radio-outer-circle {
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid $secondary-green-color  !important;
+}
+
+
+@media only screen and (max-width: 1450px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 32.3%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 32.2%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 32.1%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 32%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 48.9%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 48.6%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 48.5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 48.4%;
+    }
+}
+
+
+@media only screen and (max-width: 711px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 48.3%;
+    }
+}
+
+@media only screen and (max-width: 674px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 48.2%;
+    }
+}
+
+@media only screen and (max-width: 643px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        min-width: 48.1%;
+    }
+}
+
+@media only screen and (max-width: 612px) {
+    .cards-list {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cards-list app-card {
+        width: 100%;
+    }
+}

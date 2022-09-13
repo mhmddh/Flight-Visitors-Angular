@@ -1,0 +1,27 @@
+{
+    "ENGLISH": "الانكليزي",
+    "ARABIC": "العربية",
+    "VISITORS_LIST": "قائمة الزوار",
+    "VISITORS_MANAGEMENT_PLATFORM": "منصة إدارة الزوار",
+    "SEARCH": "بحث",
+    "FILTER": "فلتر",
+    "REF.": "المرجع",
+    "SUBMITTED": "سلم",
+    "ISSUER": "المُصدر",
+    "NAME": "الاسم",
+    "AGE": "العمر",
+    "NATIONALITY": "الجنسية",
+    "GENDER": "الجنس",
+    "COUNTRY_ORIGIN": "بلد المنشأ",
+    "RESIDENCE_COUNTRY": "بلد الإقامة",
+    "ARRIVAL_DATE": "تاريخ الوصول",
+    "SUBMITTED_TIME": "وقت الإرسال",
+    "FLIGHT_NUMBER": "رقم الرحلة الجوية",
+    "TYPE": "نمط",
+    "STATUS": "الحالة",
+    "DARK": "مظلم",
+    "LIGHT": "مضيئ",
+    "SWITCH_LANGUAGE": "تبديل اللغة",
+    "COLUMNS": "الخانات"
+
+}

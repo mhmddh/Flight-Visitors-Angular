@@ -1,0 +1,19 @@
+<div class="mat-sidenav-content">
+    <mat-button-toggle-group name="theme" aria-label="Theme Mode">
+        <mat-button-toggle value="light" [checked]="themeMode == 'light'" (change)="changeTheme($event)">{{ 'LIGHT' |
+            translate }}
+        </mat-button-toggle>
+        <mat-button-toggle value="dark" [checked]="themeMode == 'dark'" (change)="changeTheme($event)">{{ 'DARK' |
+            translate }}
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    <span class="sidenav-title">{{ 'SWITCH_LANGUAGE' | translate }}</span>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="ar" (change)="changeCurrentLang($event)" [checked]="currentLang ==='ar' ">{{ 'ARABIC' |
+            translate }}
+        </mat-radio-button>
+        <mat-radio-button value="en" (change)="changeCurrentLang($event)" [checked]="currentLang === 'en'">{{ 'ENGLISH'
+            | translate }}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>

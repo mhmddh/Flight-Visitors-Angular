@@ -1,0 +1,26 @@
+<section class="tool-panel"  [ngClass]="{'tool-panel-expanded':!isCollapsed}">
+    <div class="tool-panel-content"
+    [ngClass]="{'tool-panel-content-expanded' : !isCollapsed,'rtl-tool-panel-content-expanded': rtl && !isCollapsed }">
+    <button class="toggle-menu-button" [ngClass]="{'reversed-button': rtl}" (click)="toggleMenu()">
+        <mat-icon>view_module</mat-icon>
+        <span>{{ 'COLUMNS' | translate }}</span>
+    </button>
+
+</div>
+<div [ngClass]="{'columns-filter': !rtl ,'rtl-columns-filter':rtl}" *ngIf="!isCollapsed">
+    <div class="filter-input-container">
+        <input #searchCol class="filter-input" placeholder="{{ 'FILTER' | translate }}"
+            (keyup)="searchColumn(searchCol.value)">
+        <span class="filter-span" [ngClass]="{'rtl-span-direction': rtl}">
+            <mat-icon>filter_list</mat-icon>
+        </span>
+    </div>
+    <div class="column-list">
+        <div *ngFor="let col of columnDefs" class="column-checkbox">
+            <mat-checkbox [disableRipple]="true" [checked]="isChecked(col.field)" (change)="toggleColumn(col.field)">{{
+                col.headerName }}
+            </mat-checkbox>
+        </div>
+    </div>
+</div>
+</section>
